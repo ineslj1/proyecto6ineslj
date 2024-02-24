@@ -14,7 +14,7 @@ const isAuth = async (req, res, next) => {
     next();
 
   } catch (error) {
-    return res.status(400).json("No estas autorizado")
+    return res.status(400).json("You are not authorised")
   }
 };
 const isAdmin = async (req, res, next) => {
@@ -32,11 +32,11 @@ const isAdmin = async (req, res, next) => {
       req.user = user;
       next();
     } else {
-      return res.status(400).json("Esta acción solo la puede hacer los administradores.");
+      return res.status(400).json("This action can only be run by administrators");
     }
 
   } catch (error) {
-    return res.status(400).json("No estas autorizado")
+    return res.status(400).json("You are not authorized")
   }
 }
 module.exports = { isAuth, isAdmin };

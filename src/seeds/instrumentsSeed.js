@@ -27,7 +27,7 @@ const instrumentsDocuments = instruments.map((ins) => new Instrument(ins));
 
 mongoose
   .connect(
-    'mongodb+srv://aaronromeromusic:Rewenclow.1324657980@cluster0.otk092i.mongodb.net/?retryWrites=true&w=majority'
+    'mongodb+srv://ineslopezjuan:0g8Uwv7vCvSOuZnf@cluster0.iwuzt82.mongodb.net/?retryWrites=true&w=majority'
   )
   .then(async () => {
     const allInstrument = await Instrument.find();
